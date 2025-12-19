@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Experience</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="experience-page">
+<!-- DARK MODE BACKGROUND VIDEO -->
+<div class="bg-video">
+    <video autoplay muted loop playsinline>
+        <source src="dark bg.mp4" type="video/mp4">
+    </video>
+</div>
+
+
+<nav>
+  <h1>KUKKIZZ'S PAGE</h1>
+  <div>
+<button class="dark-toggle" onclick="toggleDark()">🌙</button>
+
+ <a href="index.html">Home</a> 
+<a href="about.html">About Me</a> 
+<a href="experience.html">Experience</a> 
+<a href="gallery.html">Gallery</a> 
+
+
+  </div>
+</nav>
+
+<marquee class="page-marquee gallery-marquee">
+ (っ◔◡◔)っ ♥ welcome to Dunia Wanita Cantik ♥  (っ◔◡◔)っ ♥ welcome to Dunia Wanita Cantik ♥   (っ◔◡◔)っ ♥ welcome to Dunia Wanita Cantik ♥
+</marquee>
+
+<div class="content">
+<h2>Experience</h2>
+
+ </div>
+<!-- PROFILE SECTION WITH TEXT BOX -->
+<div class="about-box">
+  
+  <div class="profile-photo">
+    <img src="ex 2.jpg" data-album="maha2024">
+    <img src="ex 1.jpg" data-album="maha2024">
+    <img src="ex 3.jpg" data-album="maha2024">
+    <img src="ex 4.jpg" data-album="maha2024">
+    <img src="ex 5.jpg" data-album="maha2024">
+  </div>
+ <div class="about-text">
+<h3>MAHA 2024</h3>
+<p>
+I volunteered at the MAHA 2024 exhibition for 12 consecutive days without any days off. We worked for 18 hours a day, from 6:00 a.m. to 12:00 midnight. It was a very interesting and valuable experience, as I had the opportunity to meet many visitors and get to know other fellow volunteers. I also gained a lot of knowledge from everyone I met there. I truly wish to participate again as a MAHA volunteer in the upcoming MAHA 2026.
+
+</p>
+  
+  </div>
+</div>
+    
+<div class="about-box">
+  
+
+  <div class="profile-photo">
+    <img src="album 3.jpg" data-album="farmfresh">
+    <img src="album 4.jpg" data-album="farmfresh">
+    <img src="album 1.jpg" data-album="farmfresh">
+    <img src="album 2.jpg" data-album="farmfresh">
+    <img src="album 6.jpg" data-album="farmfresh">
+  </div>
+
+ <div class="about-text">
+<h3>Farm Freash @ UPM</h3>
+<p>
+Worked part-time as a facilitator for kindergarten students. Guided them around the Farm Fresh area, where they learned basic knowledge about how cows are cared for to produce milk, how milk is pumped from cows, and were introduced to composting. This experience helped improve my communication skills, especially when dealing with young children who can be quite challenging to handle..
+</p>
+  
+  </div>
+</div>
+
+<div class="about-box">
+  
+  <div class="profile-photo">
+    <img src="p 3.jpg" data-album="earthopia">
+    <img src="p 2.jpg" data-album="earthopia">
+    <img src="p 4.jpg" data-album="earthopia">
+    <img src="p 1.jpg" data-album="earthopia">
+    <img src="p 5.jpg" data-album="earthopia">
+  </div>
+
+   <div class="about-text">
+<h3>Earthopia</h3>
+<p>
+I worked part-time in an office as a facilitator for Chinese schools. I taught students how to make soap and introduced them to basic robotics. I was selected for this role because I am fluent in Mandarin, which made it easier for the students to communicate and understand the lessons.
+
+</p>
+ </div>
+</div>
+
+<div class="about-box">
+    
+  <div class="profile-photo">
+    <img src="o1.jpg" data-album="deedapit">
+    <img src="o2.jpg" data-album="deedapit">
+    <img src="o3.jpg" data-album="deedapit">
+    <img src="o 4.jpg" data-album="deedapit">
+    <img src="o5.jpg" data-album="deedapit">  
+</div>
+   <div class="about-text">
+<h3>Deedapit Bakery & Cafe</h3>
+<p>
+I helped my sister at her bakery by cooking and preparing various types of desserts ordered by customers. Sometimes, I also assisted her during events when she provided services for vendors. It was quite enjoyable because I got to spend time with my sister, and it was fun being able to enjoy free desserts as well.
+</p>
+ </div>
+</div>
+
+<style>
+body {
+    background-image: url("background 4.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+    margin: 0;
+}
+</style>
+
+<footer>
+  © 2025 Kukkizz | IMD318
+</footer>
+
+<script>
+const toggleBtn = document.querySelector(".dark-toggle");
+const clickSound = new Audio("sound 2.mp3"); // 
+
+function toggleDark() {
+    document.body.classList.toggle("dark");
+
+    // PLAY SOUND
+    clickSound.currentTime = 0;
+    clickSound.play();
+
+    // SAVE MODE
+    if (document.body.classList.contains("dark")) {
+        localStorage.setItem("theme", "dark");
+        toggleBtn.textContent = "☀️";
+    } else {
+        localStorage.setItem("theme", "light");
+        toggleBtn.textContent = "🌙";
+    }
+}
+
+// LOAD SAVED MODE
+window.onload = function () {
+    if (localStorage.getItem("theme") === "dark") {
+        document.body.classList.add("dark");
+        toggleBtn.textContent = "☀️";
+    } else {
+        toggleBtn.textContent = "🌙";
+    }
+};
+</script>
+<script>
+const videoSource = document.querySelector(".bg-video video source");
+const video = document.querySelector(".bg-video video");
+const body = document.body;
+
+function updateDarkVideo() {
+    if (!body.classList.contains("dark")) return;
+
+    if (body.classList.contains("home-page")) {
+        videoSource.src = "videos/home-dark.mp4";
+    } else if (body.classList.contains("about-page")) {
+        videoSource.src = "videos/about-dark.mp4";
+    } else if (body.classList.contains("experience-page")) {
+        videoSource.src = "videos/experience-dark.mp4";
+    } else if (body.classList.contains("gallery-page")) {
+        videoSource.src = "videos/gallery-dark.mp4";
+    }
+
+    video.load();
+}
+
+updateDarkVideo();
+</script>
+<!-- ===== BACKGROUND SOUND BUTTON ===== -->
+<button id="music-btn">🎵</button>
+
+<!-- ===== MUSIC POPUP ===== -->
+<div id="music-popup">
+    <div class="music-card" onclick="playSong('bg sound 1.mp3')">
+        <p>Finding Peace</p><span>Kainbeats</span>
+    </div>
+    <div class="music-card" onclick="playSong('bg sound 2.mp3')">
+        <p>Chill Hip Hop Beat</p><span>Lofi</span>
+    </div>
+    <div class="music-card" onclick="playSong('bg sound 3.mp3')">
+        <p> The Cutest Bunny</p><span>PupClub</span>
+    </div>
+</div>
+<audio id="bg-music" loop></audio>
+
+<script>
+const btn = document.getElementById("music-btn");
+const popup = document.getElementById("music-popup");
+const audio = document.getElementById("bg-music");
+
+btn.onclick = () => {
+    popup.style.display =
+        popup.style.display === "flex" ? "none" : "flex";
+};
+
+
+</script>
+<script>
+const bgMusic = document.getElementById("bg-music");
+
+/* ===== LOAD SAVED MUSIC ===== */
+window.addEventListener("load", () => {
+    const savedSrc = localStorage.getItem("bgMusicSrc");
+    const savedTime = localStorage.getItem("bgMusicTime");
+    const wasPlaying = localStorage.getItem("bgMusicPlaying");
+
+    if (savedSrc) {
+        bgMusic.src = savedSrc;
+        bgMusic.currentTime = savedTime ? parseFloat(savedTime) : 0;
+
+        if (wasPlaying === "true") {
+            bgMusic.play().catch(() => {});
+        }
+    }
+});
+
+/* ===== SAVE TIME ===== */
+setInterval(() => {
+    if (!bgMusic.paused) {
+        localStorage.setItem("bgMusicTime", bgMusic.currentTime);
+    }
+}, 1000);
+
+/* ===== PLAY SONG (OVERRIDE) ===== */
+function playSong(src) {
+    bgMusic.src = src;
+    bgMusic.play();
+
+    localStorage.setItem("bgMusicSrc", src);
+    localStorage.setItem("bgMusicPlaying", "true");
+}
+
+/* ===== SAVE WHEN LEAVE PAGE ===== */
+window.addEventListener("beforeunload", () => {
+    localStorage.setItem("bgMusicTime", bgMusic.currentTime);
+    localStorage.setItem("bgMusicPlaying", !bgMusic.paused);
+});
+</script>
+
+<!-- ===== IMAGE POPUP / LIGHTBOX ===== -->
+<div id="lightbox">
+    <span class="close">×</span>
+    <span class="prev">❮</span>
+    <img id="lightbox-img">
+    <span class="next">❯</span>
+</div>
+
+<script>
+let currentAlbum = [];
+let currentIndex = 0;
+
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+
+document.querySelectorAll(".profile-photo img").forEach(img => {
+    img.addEventListener("click", () => {
+        const albumName = img.dataset.album;
+        currentAlbum = [...document.querySelectorAll(
+            `.profile-photo img[data-album="${albumName}"]`
+        )];
+
+        currentIndex = currentAlbum.indexOf(img);
+        openLightbox();
+    });
+});
+
+function openLightbox() {
+    lightbox.style.display = "flex";
+    lightboxImg.src = currentAlbum[currentIndex].src;
+}
+
+function closeLightbox() {
+    lightbox.style.display = "none";
+}
+
+document.querySelector(".close").onclick = closeLightbox;
+
+document.querySelector(".next").onclick = () => {
+    currentIndex = (currentIndex + 1) % currentAlbum.length;
+    openLightbox();
+};
+
+document.querySelector(".prev").onclick = () => {
+    currentIndex = (currentIndex - 1 + currentAlbum.length) % currentAlbum.length;
+    openLightbox();
+};
+
+/* close bila klik background */
+lightbox.onclick = (e) => {
+    if (e.target === lightbox) closeLightbox();
+};
+</script>
+
+
+
+
+
+</body>
+</html>
+
